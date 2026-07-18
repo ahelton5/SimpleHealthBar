@@ -1,0 +1,32 @@
+# SimpleHealthBar configuration
+enable-player-bars: true
+enable-mob-bars: true
+
+bar-style: HEARTS_SCALED
+# OPTIONS:
+#  HEARTS_SCALED,   // heart count matches actual max health
+#  HEARTS_FIXED_10, // always exactly 10 hearts, normalized to health percentage
+#  SHORT,           // single heart + "current/max"
+#  PERCENTAGE,      // single heart + "NN%"
+#  GRADIENT_SHORT   // single color-shifting heart + "current/max"
+
+# How far away (in blocks) a viewer can see health bars
+show-distance: 20.0
+
+# How far a player can be looking at a mob to trigger its bar
+look-reach: 5.0
+
+# How long (in seconds) a mob's bar stays visible after taking damage
+damage-visible-seconds: 5.0
+
+# How often (in ticks, 20 = 1 second) bars refresh
+update-interval-ticks: 10
+
+# Vertical offset (in blocks) added on top of the base spawn height,
+# to clear Minecraft's built-in nametag rendered above the player
+vertical-offset: 0.6
+
+# Entity types that should never show a health bar, even if damaged or looked at.
+# Use Bukkit EntityType names: https://jd.papermc.io/paper/1.21/org/bukkit/entity/EntityType.html
+excluded-entity-types:
+  - ARMOR_STAND

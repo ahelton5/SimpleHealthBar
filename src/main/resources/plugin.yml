@@ -1,0 +1,23 @@
+name: SimpleHealthBar
+version: '${version}'
+description: Packet-based live health bars for players and mobs
+author: Ashyr Helton
+website: https://github.com/ashyrhelton/SimpleHealthBar   # optional
+
+main: io.github.ahelton5.simpleHealthBar.SimpleHealthBar
+api-version: '26.2'
+load: POSTWORLD
+
+softdepend:
+  - ProtocolLib
+  - ProtocolSupport
+  - ViaVersion
+  - ViaBackwards
+  - ViaRewind
+  - Geyser-Spigot
+
+commands:
+  healthbar:
+    description: Usage - /healthbar [toggle|killall|debug|self]
+    usage: /<command> [toggle|killall|debug|self]
+    aliases: [hb]
