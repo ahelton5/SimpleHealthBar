@@ -1,10 +1,10 @@
-# HealthBar
+# SimpleHealthBar
 
 A Paper plugin that shows live health bars above players and mobs. No hologram plugin, no scoreboard hacks — it's all done with packets, so the real entities on the server are never touched.
 
 ## Why packets?
 
-The obvious way to do this is `setCustomName()` on the entity itself, but that has a nasty side effect: naming a mob makes it persistent, so it stops despawning naturally. Instead, HealthBar spawns a fake, client-side-only `TextDisplay` for each viewer and mounts it as a passenger on the real entity. The client handles following the entity on its own (walking, jumping, falling — no extra packets needed), and since nothing about the real entity ever changes, despawn behavior, persistence, everything stays exactly as vanilla intended.
+The obvious way to do this is `setCustomName()` on the entity itself, but that has a nasty side effect: naming a mob makes it persistent, so it stops despawning naturally. Instead, SimpleHealthBar spawns a fake, client-side-only `TextDisplay` for each viewer and mounts it as a passenger on the real entity. The client handles following the entity on its own (walking, jumping, falling — no extra packets needed), and since nothing about the real entity ever changes, despawn behavior, persistence, everything stays exactly as vanilla intended.
 
 ## Features
 
@@ -27,7 +27,7 @@ Output jar lands in `build/libs/`. Drop it in `plugins/` like any other plugin.
 
 ## Config
 
-First run generates `plugins/HealthBar/config.yml`. Worth knowing:
+First run generates `plugins/SimpleHealthBar/config.yml`. Worth knowing:
 
 - `show-distance` — how far away bars are visible (this is a box check, not a true sphere, so diagonal distances can be a bit generous)
 - `damage-visible-seconds` — how long a mob's bar sticks around after taking damage
@@ -38,10 +38,10 @@ First run generates `plugins/HealthBar/config.yml`. Worth knowing:
 ## Commands
 
 ```
-/healthbar          spawn a bar above your own head, for testing
-/healthbar toggle    turn all bars on/off for yourself
-/healthbar killall   wipe every active bar (op only)
-/healthbar debug     dump what the server thinks you're currently tracking
+/SimpleHealthBar          spawn a bar above your own head, for testing
+/SimpleHealthBar toggle    turn all bars on/off for yourself
+/SimpleHealthBar killall   wipe every active bar (op only)
+/SimpleHealthBar debug     dump what the server thinks you're currently tracking
 ```
 
 ## Known limitations
