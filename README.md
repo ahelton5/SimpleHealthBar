@@ -38,7 +38,7 @@ First run generates `plugins/SimpleHealthBar/config.yml`. Worth knowing:
 ## Commands
 
 ```
-/SimpleHealthBar          spawn a bar above your own head, for testing
+/SimpleHealthBar self      spawn a bar above your own head, for testing
 /SimpleHealthBar toggle    turn all bars on/off for yourself
 /SimpleHealthBar killall   wipe every active bar (op only)
 /SimpleHealthBar debug     dump what the server thinks you're currently tracking
